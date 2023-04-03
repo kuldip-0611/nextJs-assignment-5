@@ -1,5 +1,17 @@
-import '@/styles/globals.css'
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Toaster, ToastIcon } from 'react-hot-toast';
+import { Provider } from "react-redux";
+import store from '../redux/store/store';
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Provider store={store}>
+        <Toaster />
+        <Component {...pageProps} />
+      </Provider>
+
+    </>
+  )
 }
