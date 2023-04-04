@@ -53,6 +53,6 @@ export const Update_profile_data = (values) => {
 
 
     localStorage.setItem("loginData", JSON.stringify(objdata));
-
+    return valid;
 
 }

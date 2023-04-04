@@ -33,7 +33,9 @@ export const Change_Password = (values) => {
         item = ActiveUser;
       }
       return item;
+      
     });
+    return valid;
     localStorage.setItem("loginData", JSON.stringify(newLoginData));
   }
 }

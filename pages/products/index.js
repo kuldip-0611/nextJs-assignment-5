@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchData } from "../../redux/reducers/Set_Product";
 import { useSelector, useDispatch } from "react-redux";
-import ProductCard from "../../components/_Product_Card";
+import ProductCard from "../../components/Product_Card";
 import Pagination from "react-bootstrap/Pagination";
 import { Puff } from "react-loader-spinner";
 import Link from 'next/link';
 import { Handle_Logout } from "@/utils/auth/Logout_Auth";
 import { useRouter } from "next/router";
+
 
 const ProductPage = () => {
     const [login, setLogin] = useState(false)
@@ -99,20 +100,3 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
-
-// export async function getStaticProps(context, skip) {
-
-//     const response = await axios.get(`https://dummyjson.com/products?limit=8&skip=${skip}`)
-//     const data = response.data
-
-//     console.log(data);
-
-
-//     return {
-//         props: {
-//             data
-//         }
-//     }
-
-
-// }

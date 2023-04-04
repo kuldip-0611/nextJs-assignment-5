@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-
 import {
   MDBBtn,
   MDBContainer,
@@ -57,7 +55,7 @@ function LoginForm() {
                     icon="cubes fa-3x me-3"
                     style={{ color: "#ff6219" }}
                   />
-                  <span className="h1 fw-bold mb-0 text-secondary">Login</span>
+                  
                 </div>
 
                 <h5

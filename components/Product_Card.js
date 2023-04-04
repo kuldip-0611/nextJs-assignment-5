@@ -19,7 +19,7 @@ import Link from "next/link";
 
 
 const ProductCard = ({ item }) => {
-  
+ 
   return (
     <>
       <div className="col col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-sm-12">

@@ -10,8 +10,8 @@ const DetailPage = ({ data }) => {
             <div className="product-images col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 ">
                 <Carousel className="m-5">
                     {data.images
-                        ? data.images.map((item, index) => (
-                            <Carousel.Item key={index}>
+                        ? data.images.map((item) => (
+                            <Carousel.Item key={item.id}>
                                 <img
                                     className="d-block w-100"
                                     src={item}

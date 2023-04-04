@@ -1,8 +1,5 @@
-import React,{useEffect} from "react";
-
+import {useEffect} from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-
-
 import { Change_Passwordvalidation } from "../../../constants/validation";
 import {
   ChangePassword_initialState,
