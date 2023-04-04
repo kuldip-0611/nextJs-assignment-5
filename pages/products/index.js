@@ -55,7 +55,7 @@ const ProductPage = () => {
 
         <>
             {login && (<div>
-                <div className="d-flex justify-content-around mt-4 bg-dark p-3 ">
+                <div className="d-flex justify-content-around  bg-dark p-3 ">
                     <Link href='/products/change_password'>
                         <button className="text-dark bg-light border border-none rounded h6 p-2">Change Password </button>
                     </Link>

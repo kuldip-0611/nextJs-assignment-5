@@ -17,6 +17,7 @@ import {Loginvalidation} from '../constants/validation';
 import { Login_Auth } from "@/utils/auth/Login_Auth";
 import { useRouter } from "next/router";
 import { toast } from "react-hot-toast";
+import { useEffect } from "react";
 
 const initialState = {
   email: "",
@@ -34,6 +35,12 @@ function LoginForm() {
       router.push("/products");
     }
   };
+ useEffect(() => {
+    const isLogin = JSON.parse(localStorage.getItem("isLogin"));
+    if (isLogin) {
+      router.push("/products");
+    } 
+  }, [router]);
   return (
     <>
       <MDBContainer className="my-5">

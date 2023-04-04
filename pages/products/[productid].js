@@ -3,8 +3,17 @@ import { BsCurrencyDollar } from 'react-icons/bs';
 import { MdOutlineStarOutline } from 'react-icons/md';
 import { AiOutlinePercentage } from 'react-icons/ai';
 import axios from "axios";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const DetailPage = ({ data }) => {
+    const router = useRouter()
+    useEffect(() => {
+        const isLogin = JSON.parse(localStorage.getItem("isLogin"));
+        if (isLogin === false) {
+          router.push("/");
+        } 
+      }, [router]);
     return (
         <div className="main-content row">
             <div className="product-images col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 ">
@@ -83,6 +92,4 @@ export async function getServerSideProps(context) {
             data
         }
     }
-
-
 }

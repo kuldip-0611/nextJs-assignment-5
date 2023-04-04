@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import { useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Change_Passwordvalidation } from "../../../constants/validation";
 import {
@@ -7,24 +7,23 @@ import {
 } from "../../../utils/auth/Change_Password";
 import { useRouter } from "next/router";
 const ChangePassword = () => {
-    const router = useRouter();
-/**
- * The handleSubmit function is called when the form is submitted. It receives the values of the form
- * as a parameter
- */
+  const router = useRouter();
+  /**
+   * The handleSubmit function is called when the form is submitted. It receives the values of the form
+   * as a parameter
+   */
   const handleSubmit = (values) => {
-    if(Change_Password(values))
-    {
+    if (Change_Password(values)) {
       router.push('/products')
     }
-    
+
   };
 
   useEffect(() => {
     if (JSON.parse(localStorage.getItem('isLogin')) === false || localStorage.getItem('isLogin') === null) {
-        router.push('/')
+      router.push('/')
     }
-}, [])
+  }, [])
 
   return (
     <div>
